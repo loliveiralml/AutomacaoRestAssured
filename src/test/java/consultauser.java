@@ -1,4 +1,5 @@
 
+import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -6,14 +7,8 @@ import org.testng.annotations.Test;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
-public class consultauser {
+public class consultauser extends parameters {
     public static Response response;
-
-    @BeforeTest
-
-    public static void setup() {
-        baseURI = "https://reqres.in/api";
-    }
 
     @Test
     public void testStatusCode() {

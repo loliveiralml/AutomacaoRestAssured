@@ -1,8 +1,8 @@
 import io.restassured.RestAssured;
-import org.junit.BeforeClass;
+import org.testng.annotations.BeforeTest;
 
 public class parameters {
-   @BeforeClass
+   @BeforeTest
     public static void urlApi() {
         RestAssured.baseURI = "https://reqres.in/api";
     }
